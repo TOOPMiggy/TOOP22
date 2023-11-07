@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+
+class grades{
+private:
+    double grade1;
+    double grade2;
+    double grade3;
+
+public:
+    // Constructor to initialize the private variables to 0.0
+    grades() : grade1(0.0), grade2(0.0), grade3(0.0) {}
+
+    // Public method to set the values of the three grades
+    void setGrades(double g1, double g2, double g3) {
+        grade1 = g1;
+        grade2 = g2;
+        grade3 = g3;
+    }
+
+    // Public method to calculate the average of the three grades
+    double calculateAverage() {
+        return (grade1 + grade2 + grade3) / 3.0;
+    }
+};
+
+int main() {
+    grades Cadet1;
+    grades Cadet2;
+
+    // Set the grades for each cadet
+    Cadet1.setGrades(95.7, 89.0, 97.9);
+    Cadet2.setGrades(88.5, 76.8, 94.3);
+
+    // Output each cadet's grade average
+    cout << "Cadet1's Grade Average: " << Cadet1.calculateAverage() << endl;
+    cout << "Cadet2's Grade Average: " << Cadet2.calculateAverage() << endl;
+
+    return 0;
+}
